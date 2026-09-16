@@ -244,9 +244,9 @@ The single-scale diagnostic is represented separately by the fixed-shift sensiti
 | FedGCS / GenerativeFL | `https://github.com/zhiyuan-ning/GenerativeFL` | `785773b2a6675048aa3ab2ac7aaf0324b802f368` |
 | Adaptive Client Sampling | `https://github.com/boxinz17/FL-Client-Sampling` | `8d12ac39f10d8ac90a7dfb245c1a77f288ba39c4` |
 | Optimal-GPM | `https://github.com/ZhengYeah/Optimal-GPM` | `e38cacb4ae557c5a0eb08413b96fdacdbd807a12` |
-| FEROMA | `https://github.com/dariofenoglio98/FEROMA` | Vendored source snapshot; upstream commit not verified |
+| FEROMA | `https://github.com/dariofenoglio98/FEROMA` | Official source snapshot used for channel adaptation; integrity recorded by SHA-256 |
 
-Git-managed baselines are pinned through submodules. FEROMA is included as a source snapshot because the exact upstream Git commit of the downloaded archive could not be verified.
+For FEROMA, we use the official upstream source as the implementation basis and retain the corresponding source snapshot in this repository. Its released contents are recorded in `baselines_2025_2026/FEROMA/SHA256SUMS.txt`. For a controlled comparison, the FEROMA client profile signal is adapted to the common OGPM reporting and fixed-budget scheduling interface used in this study. The original FEROMA method and source remain attributed to their upstream authors.
 
 Third-party source directories retain their upstream authorship and licensing terms.
 
