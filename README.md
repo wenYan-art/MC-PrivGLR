@@ -27,8 +27,6 @@ MC-PrivGLR contains the following components:
 5. **Top-2 scale fusion.** The two strongest accumulated charts are fused into the client scheduling score.
 6. **Budgeted adaptation.** At each scheduling step, the clients with the largest MC-PrivGLR scores are selected for local adaptation and weighted aggregation.
 
-The implemented privacy unit is one client monitoring-window event. This release does not claim whole-trajectory LDP.
-
 ## Repository Contents
 
     MC-PrivGLR-release/
