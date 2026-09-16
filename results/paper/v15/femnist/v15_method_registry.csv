@@ -1,0 +1,18 @@
+policy,controller_kind,epsilon,source_status,source_detail,source_repo
+random,random,none,control,uniform random selection,
+oracle,oracle,none,upper-bound,true drift identities and raw monitoring loss,
+poc_ogpm_eps_0.5,poc_private,eps_0.5,source-adapted+OGPM-interface,HiCS-FL/server/server_poc.py (Power-of-Choice baseline),https://github.com/CityChan/HiCS-FL
+oort_official_ogpm_eps_0.5,oort_private,eps_0.5,official-benchmark-code+OGPM-interface,HiCS-FL/UCBsampler.py (Oort baseline in NeurIPS-2024 artifact),https://github.com/CityChan/HiCS-FL
+hics2024_source_adapted_ogpm_eps_0.5,hics2024,eps_0.5,source-adapted+official-primitives,"HiCS-FL/clustering.py and server/server_hics.py, NeurIPS 2024",https://github.com/CityChan/HiCS-FL
+fedgcs2024_source_adapted_ogpm_eps_0.5,fedgcs_private,eps_0.5,official-architecture+source-adapted-OGPM-interface,"GenerativeFL/autos encoder-predictor-decoder, IJCAI 2024",https://github.com/zhiyuan-ning/GenerativeFL
+mcglr_top2_ogpm_eps_0.5,mcglr_top2,eps_0.5,ours-frozen,V13 MC-PrivGLR-top2,
+poc_ogpm_eps_1,poc_private,eps_1,source-adapted+OGPM-interface,HiCS-FL/server/server_poc.py (Power-of-Choice baseline),https://github.com/CityChan/HiCS-FL
+oort_official_ogpm_eps_1,oort_private,eps_1,official-benchmark-code+OGPM-interface,HiCS-FL/UCBsampler.py (Oort baseline in NeurIPS-2024 artifact),https://github.com/CityChan/HiCS-FL
+hics2024_source_adapted_ogpm_eps_1,hics2024,eps_1,source-adapted+official-primitives,"HiCS-FL/clustering.py and server/server_hics.py, NeurIPS 2024",https://github.com/CityChan/HiCS-FL
+fedgcs2024_source_adapted_ogpm_eps_1,fedgcs_private,eps_1,official-architecture+source-adapted-OGPM-interface,"GenerativeFL/autos encoder-predictor-decoder, IJCAI 2024",https://github.com/zhiyuan-ning/GenerativeFL
+mcglr_top2_ogpm_eps_1,mcglr_top2,eps_1,ours-frozen,V13 MC-PrivGLR-top2,
+poc_ogpm_eps_2,poc_private,eps_2,source-adapted+OGPM-interface,HiCS-FL/server/server_poc.py (Power-of-Choice baseline),https://github.com/CityChan/HiCS-FL
+oort_official_ogpm_eps_2,oort_private,eps_2,official-benchmark-code+OGPM-interface,HiCS-FL/UCBsampler.py (Oort baseline in NeurIPS-2024 artifact),https://github.com/CityChan/HiCS-FL
+hics2024_source_adapted_ogpm_eps_2,hics2024,eps_2,source-adapted+official-primitives,"HiCS-FL/clustering.py and server/server_hics.py, NeurIPS 2024",https://github.com/CityChan/HiCS-FL
+fedgcs2024_source_adapted_ogpm_eps_2,fedgcs_private,eps_2,official-architecture+source-adapted-OGPM-interface,"GenerativeFL/autos encoder-predictor-decoder, IJCAI 2024",https://github.com/zhiyuan-ning/GenerativeFL
+mcglr_top2_ogpm_eps_2,mcglr_top2,eps_2,ours-frozen,V13 MC-PrivGLR-top2,

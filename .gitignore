@@ -1,0 +1,84 @@
+﻿# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python environments
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+build/
+dist/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Raw datasets and generated caches
+data/*
+!data/README.md
+**/cinic10_processed/
+**/femnist_processed/
+**/femnist_hf/
+**/hf_cache/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.onnx
+checkpoints/
+
+# Intermediate experiment outputs
+results/*
+!results/paper/
+!results/paper/**
+formal_results_backup/
+wandb/
+runs/
+logs/
+*.log
+*.out
+*.err
+*.pid
+
+# Large archives and raw arrays
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.npy
+*.npz
+*.parquet
+*.pkl
+*.pickle
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+~$*
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+results/paper/MAIN_RESULTS_SEED_AUDIT.csv
+*.pyc

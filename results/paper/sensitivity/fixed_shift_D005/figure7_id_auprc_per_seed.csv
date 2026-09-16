@@ -1,0 +1,4 @@
+﻿"changed_fraction","seed","policy","epsilon","identity_auprc_post"
+"0.05","7001","mcglr_top2_ogpm_eps_1","eps_1","0.33081374656003915"
+"0.05","7002","mcglr_top2_ogpm_eps_1","eps_1","0.5202293061547372"
+"0.05","7003","mcglr_top2_ogpm_eps_1","eps_1","0.3925656704218523"

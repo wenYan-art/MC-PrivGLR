@@ -1,0 +1,9 @@
+[submodule "baselines/HiCS-FL"]
+	path = baselines/HiCS-FL
+	url = https://github.com/CityChan/HiCS-FL.git
+[submodule "baselines/FedGCS"]
+	path = baselines/FedGCS
+	url = https://github.com/zhiyuan-ning/GenerativeFL.git
+[submodule "baselines_2025_2026/FL-Client-Sampling"]
+	path = baselines_2025_2026/FL-Client-Sampling
+	url = https://github.com/boxinz17/FL-Client-Sampling.git

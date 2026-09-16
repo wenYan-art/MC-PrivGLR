@@ -1,0 +1,15 @@
+flower==2.0.1
+matplotlib==3.9.2
+pandas==2.2.2
+pillow==10.4.0
+scikit-learn==1.5.1
+scipy==1.14.1
+seaborn==0.13.2
+six==1.16.0
+torch #==2.4.1
+torchvision #==0.19.1
+flwr==1.11.0
+openpyxl
+kneed
+kagglehub==0.3.10
+datasets==3.3.2

@@ -1,0 +1,7 @@
+﻿Third-party source: FEROMA
+Official repository: https://github.com/dariofenoglio98/FEROMA
+Local source archive: FEROMA-main.zip
+Archive SHA256: 38D4BDA430BF534A63C6C73FB8066D13683778C325A100C7A8D4FE7E6D021069
+Upstream commit: UNVERIFIED
+Reason: the local formal-run source was stored as a GitHub ZIP snapshot without Git metadata.
+Usage: source-adapted FEROMA profile construction used by the V24 benchmark.

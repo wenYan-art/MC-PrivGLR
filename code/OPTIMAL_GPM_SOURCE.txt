@@ -1,0 +1,5 @@
+﻿Third-party source: Optimal-GPM
+Repository: https://github.com/ZhengYeah/Optimal-GPM
+Commit: e38cacb4ae557c5a0eb08413b96fdacdbd807a12
+Vendored file: code/closed_form_mechanism.py
+Purpose: official Optimal-GPM LDP mechanism
