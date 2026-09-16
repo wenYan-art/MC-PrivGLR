@@ -221,8 +221,6 @@ Included metrics are:
 - the reported Top-2 versus Top-1 fusion ablation;
 - the reported sensitivity results.
 
-Intermediate diagnostics and metrics that were not compared consistently in the paper are excluded. Plotting and table-generation scripts are also excluded.
-
 See `results/README.md` for the exact mapping between paper tables, paper figures, CSV files, datasets, methods, and seed sets.
 
 ## Table 2 Ablation Definition
