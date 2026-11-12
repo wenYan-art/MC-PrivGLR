@@ -1,36 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-V20 paper ablation benchmark built on the frozen V15 MC-PrivGLR protocol.
-
-Research question
------------------
-When only a small fraction of federated clients drift, can the server use a
-history of locally private monitoring losses to spend a fixed training budget
-on the clients that still need adaptation?
-
-Controlled ablation set
------------------------
-All variants use the same dataset, stream, exact OGPM channel, client-specific
-calibration, local training, FedAvg aggregation, and evaluation.  They differ
-only in how the private GLR evidence is tracked or fused:
-1. MC-PrivGLR-top2: full method; mean of the two strongest accumulated tracks.
-2. MC-PrivGLR-top1: strongest accumulated track only.
-3. MC-PrivGLR-single: one predeclared fixed-shift accumulated track.
-4. MC-PrivGLR-instant-top2: top-2 exact-channel evidence from the current
-   private report only, with no temporal accumulation.
-Random and Oracle may be included as controls but are not method components.
-
-Privacy statement
------------------
-Each monitoring-window report separately satisfies event-level epsilon-LDP.
-Repeated reports compose over time. This program does NOT claim that the whole
-trajectory has total privacy cost epsilon.
-
-Dependencies: Python >= 3.10, numpy, pandas, torch, torchvision, and the
-official Optimal-GPM closed_form_mechanism.py in the same directory.
-The file does not import V4/V5/V6 training modules.
-"""
-
 from __future__ import annotations
 
 import argparse
