@@ -1,19 +1,4 @@
 # -*- coding: utf-8 -*-
-"""Adapters for source-backed client-selection baselines.
-
-The adapters deliberately contain no data loading, local training, or privacy
-mechanism.  They consume only information supplied by the common V14 runner:
-
-* ``OortAdapter`` calls ``UCBsampler.py`` from the official HiCS-FL repository.
-  That file is the Oort baseline shipped by the NeurIPS-2024 HiCS-FL artifact.
-* ``HiCSAdapter`` imports clustering primitives from the same official artifact
-  and follows ``server/server_hics.py`` while keeping the V14 FedAvg/data loop.
-
-Consequently Oort is labelled ``official-benchmark-code`` and HiCS is labelled
-``source-adapted`` in every output.  Neither label should be shortened to
-"official implementation" in a paper without the qualifier.
-"""
-
 from __future__ import annotations
 
 import importlib.util
