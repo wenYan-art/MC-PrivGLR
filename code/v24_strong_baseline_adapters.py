@@ -1,45 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-V24 stronger-but-principled recent baseline adapters.
-
-This file freezes two baselines BEFORE looking at V24 formal results.
-
-1) Adaptive-OSMD-NativeGrad-OGPM (JMLR 2025, source-backed)
-   - verifies the frozen official FL-Client-Sampling source commit;
-   - directly extracts and executes the official `lr_set_fun` and
-     `Adaptive_OSMD_Expert` functions;
-   - keeps the source feedback semantics
-         a_i = lambda_i^2 * ||g_i||_2^2,
-     but uses the common public gradient clipping bound C to form the bounded
-     local statistic min(||g_i||_2^2 / C^2, 1);
-   - ONLY selected-client native feedback is privatized with the same official
-     epsilon-LDP Optimal-GPM channel before entering the OSMD recursion;
-   - no raw unselected-client gradients, raw losses, or drift identities are
-     exposed to the selector;
-   - fixed B uses distinct-client PPS sampling without replacement because the
-     benchmark counts distinct model uploads.
-
-2) FEROMA-Cal-OGPM-EMA (ICLR 2026, official-source-grounded adaptation)
-   - checks the official FEROMA source for the latent mean/std descriptor and
-     Euclidean-distance primitives used by the adaptation;
-   - each client locally forms an extended latent profile [mean, std];
-   - the first `calib_end` windows are local-only calibration: the profile
-     reference is the calibration mean and q_i is the per-client 95th
-     percentile of Euclidean distance to that frozen reference;
-   - after calibration, the bounded local profile-shift statistic is
-         s_i,t = clip(||z_i,t-r_i||_2 / q_i, 0, 1);
-   - ONLY this one bounded scalar per client/window is released through the
-     same official epsilon-LDP Optimal-GPM channel;
-   - the server applies a predeclared EMA (alpha=0.20) to the private reports
-     and selects Top-B;
-   - raw profiles, raw distances, references, and q_i remain local simulation
-     state and are never passed to the server-side selector.
-
-Both transformations are source-adapted and must be labelled as such in the
-paper.  V24 is the final frozen strong-baseline version: no result-dependent
-retuning is intended after the formal five-seed run.
-"""
-
 from __future__ import annotations
 
 import ast
