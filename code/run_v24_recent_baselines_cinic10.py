@@ -1,38 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-V24 strong recent-baseline benchmark under the frozen V15 stream/FedAvg protocol.
-
-This file is intentionally baseline-only in its default ``--policy_subset recent``
-run.  It does NOT rerun MC-PrivGLR/Ours.
-
-Frozen V24 baselines
---------------------
-1) Adaptive-OSMD-NativeGrad-OGPM (JMLR 2025, source-adapted)
-   The official lr_set_fun and Adaptive_OSMD_Expert are executed directly.
-   Selection uses the OSMD sampling distribution.  After a selected client
-   trains, its source-native squared gradient-norm feedback is bounded using the
-   public common gradient clipping constant and only that scalar is released by
-   the official epsilon-LDP Optimal-GPM channel.
-
-2) FEROMA-Cal-OGPM-EMA (ICLR 2026, source-adapted)
-   Each client locally forms an extended latent [mean,std] profile.  The stable
-   calibration prefix fixes a client-local reference and q95 Euclidean-distance
-   scale.  After calibration, one bounded profile-shift scalar is released by
-   the official epsilon-LDP Optimal-GPM channel, the server applies a fixed
-   EMA(alpha=0.20), and Top-B clients are scheduled.
-
-Both baselines use the same dataset partition, drift/onset stream, B, warm-up
-checkpoint, local SGD, FedAvg, evaluation schedule, and formal seeds as V15.
-Their source-specific observation/feedback routes are preserved rather than
-forcing both methods onto the same loss proxy.
-
-Privacy statement
------------------
-Every released scalar separately satisfies event-level epsilon-LDP under the
-common Optimal-GPM mechanism.  Repeated releases compose over time; this file
-does not claim trajectory-level privacy cost epsilon.
-"""
-
 from __future__ import annotations
 
 import argparse
