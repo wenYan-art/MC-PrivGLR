@@ -1,39 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-V20 sensitivity benchmark built on the frozen V15 MC-PrivGLR protocol.
-
-Research question
------------------
-When only a small fraction of federated clients drift, can the server use a
-history of locally private monitoring losses to spend a fixed training budget
-on the clients that still need adaptation?
-
-Formal comparison set
----------------------
-1. Random and Oracle are lower/upper controls.
-2. Power-of-Choice-OGPM is the published loss-based rule with the current loss
-   replaced by the common private OGPM report.
-3. Oort-OGPM calls UCBsampler.py shipped by the official NeurIPS-2024 HiCS-FL
-   repository, with the private report as its statistical utility.
-4. HiCS-FL uses the official repository's clustering primitives and only stale
-   final-layer deltas from already selected clients.  It is explicitly marked
-   source-adapted because the V13 data/model loop is retained.
-5. MC-PrivGLR-top2 is the frozen V13 proposal.  No V13 candidate search occurs
-   in this formal benchmark.
-6. FedGCS-OGPM imports the official IJCAI-2024 AUTOS encoder/predictor/decoder
-   and adapts its record interface to the same private OGPM reports.
-
-Privacy statement
------------------
-Each monitoring-window report separately satisfies event-level epsilon-LDP.
-Repeated reports compose over time. This program does NOT claim that the whole
-trajectory has total privacy cost epsilon.
-
-Dependencies: Python >= 3.10, numpy, pandas, torch, torchvision, and the
-official Optimal-GPM closed_form_mechanism.py in the same directory.
-The file does not import V4/V5/V6 training modules.
-"""
-
 from __future__ import annotations
 
 import argparse
